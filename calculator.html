@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center><h1>Calculator</h1></center>
+        <!-- Header -->
+        <header id="mainHeader">
+            <input type="text" name="display" id="display">
+        </header>
+        <!-- Main Content -->
+        <section id="mainContent">
+            <div class="row zeroth">
+                <button type="submit" onclick="display.value = ''" id="clearBtn">Clear All</button>
+                <button type="submit" onclick="display.value = display.value.slice(0, -1)" id="backspaceBtn">⇐</button>
+            </div>
+            <div class="row first">
+                <button type="submit" onclick="display.value += '7'">7</button>
+                <button type="submit" onclick="display.value += '8'">8</button>
+                <button type="submit" onclick="display.value += '9'">9</button>
+                <button type="submit" onclick="display.value += '/'">/</button>
+            </div>
+            <div class="row second">
+                <button type="submit" onclick="display.value += '4'">4</button>
+                <button type="submit" onclick="display.value += '5'">5</button>
+                <button type="submit" onclick="display.value += '6'">6</button>
+                <button type="submit" onclick="display.value += '*'">*</button>
+            </div>
+            <div class="row third">
+                <button type="submit" onclick="display.value += '1'">1</button>
+                <button type="submit" onclick="display.value += '2'">2</button>
+                <button type="submit" onclick="display.value += '3'">3</button>
+                <button type="submit" onclick="display.value += '-'">-</button>
+            </div>
+            <div class="row fourth">
+                <button type="submit" onclick="display.value += '.'">.</button>
+                <button type="submit" onclick="display.value += '0'">0</button>
+                <button type="submit" onclick="display.value = eval(display.value)">=</button>
+                <button type="submit" onclick="display.value += '+'">+</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
